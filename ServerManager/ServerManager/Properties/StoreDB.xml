@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Servers>
+  <Server displayName="server1" value="abc">
+    <databasename displayName="s1db1" connectionString="abc1" />
+    <databasename displayName="s1db2" connectionString="abc2" />
+    <databasename displayName="s1db3" connectionString="abc3" />
+  </Server>
+  <Server displayName="server2" value="xxxx">
+    <databasename displayName="s2db1" connectionString="xyz1" />
+    <databasename displayName="s2db2" connectionString="xyz2" />
+  </Server>
+</Servers>
