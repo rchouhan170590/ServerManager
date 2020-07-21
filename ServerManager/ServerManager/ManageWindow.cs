@@ -7,6 +7,10 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 
+
+using EnvDTE;
+
+
 namespace ServerManager
 {
     /// <summary>
@@ -89,11 +93,49 @@ namespace ServerManager
         private void Execute(object sender, EventArgs e)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
+
+            String ActiveProject;
+            var projectObject = GetActiveProject();
+            if (projectObject == null || projectObject.FileName == null)
+                ActiveProject = "-1";
+            else
+            {
+                //if (System.IO.Directory.Exists(x))
+                //{
+                    ActiveProject = projectObject.FullName + "\\..\\";
+                //}
+                //else
+                //    ActiveProject = "-1";
+            }
+                 
+
+            Properties.GeneralSettings.Default.ActiveProject = ActiveProject;
+            Properties.GeneralSettings.Default.Save();
             ManagerMainWindow wnd = new ManagerMainWindow();
             //setActiveFile_inSetting();
             //wnd.Show();
             wnd.ShowDialog();
             
+        }
+
+
+        internal static Project GetActiveProject()
+        {
+            DTE dte = Package.GetGlobalService(typeof(SDTE)) as DTE;
+            return GetActiveProject(dte);
+        }
+
+        internal static Project GetActiveProject(DTE dte)
+        {
+            Project activeProject = null;
+
+            Array activeSolutionProjects = dte.ActiveSolutionProjects as Array;
+            if (activeSolutionProjects != null && activeSolutionProjects.Length > 0)
+            {
+                activeProject = activeSolutionProjects.GetValue(0) as Project;
+            }
+
+            return activeProject;
         }
     }
 }

@@ -34,7 +34,7 @@ namespace ServerManager
                 XmlElement xmlEle = xmlDoc.CreateElement("databasename");
 
                 XmlAttribute newAttr1 = xmlDoc.CreateAttribute("displayName");
-                XmlAttribute newAttr2 = xmlDoc.CreateAttribute("value");
+                XmlAttribute newAttr2 = xmlDoc.CreateAttribute("connectionString");
                 newAttr1.Value = displayName;
                 newAttr2.Value = connectionString;
                 xmlEle.Attributes.Append(newAttr1);

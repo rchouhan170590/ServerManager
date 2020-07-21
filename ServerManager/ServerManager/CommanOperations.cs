@@ -43,6 +43,14 @@ namespace ServerManager
             
         }
 
+        public static string project_path()
+        {
+            string path = Properties.GeneralSettings.Default.ActiveProject;
+            if (path.Equals("-1"))
+                return "";
+            return path;
+        }
+
 
         
     }

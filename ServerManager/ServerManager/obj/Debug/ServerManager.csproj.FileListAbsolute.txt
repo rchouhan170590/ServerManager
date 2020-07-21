@@ -25,3 +25,4 @@ D:\INTERN\2020\SocGen\MyVSExtension\ServerManager\ServerManager\ServerManager\ob
 D:\INTERN\2020\SocGen\MyVSExtension\ServerManager\ServerManager\ServerManager\obj\Debug\extension.vsixmanifest
 D:\INTERN\2020\SocGen\MyVSExtension\ServerManager\ServerManager\ServerManager\obj\Debug\files.json
 D:\INTERN\2020\SocGen\MyVSExtension\ServerManager\ServerManager\ServerManager\obj\Debug\createTemplateManifests.cache
+D:\INTERN\2020\SocGen\MyVSExtension\ServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.dll.config
