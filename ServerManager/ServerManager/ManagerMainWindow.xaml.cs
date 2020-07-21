@@ -51,8 +51,13 @@ namespace ServerManager
             Height = snugContentHeight + captionHeight + 2 * horizontalBorderHeight;
 
             ServerOperations.initializeServerInComboBox(ServerComboBox);
+            Show_Project_Path.Content = CommanOperations.project_path();
+
+
+           // connectionStringValueLabel.Content = 
         }
 
+        /*
         private void Select_Project_btn_Click(object sender, RoutedEventArgs e)
         {
             
@@ -61,11 +66,12 @@ namespace ServerManager
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                Show_Project_Path.Content = folderDialog.SelectedPath;
+                Show_Project_Path.Content = folderDialog.SelectedPath; //project_path
             }
             return;
             
         }
+        */
 
         private void DatabaseComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -77,6 +83,7 @@ namespace ServerManager
             else
                 dbname = cboParser(cbx.SelectedValue.ToString());
             Show_Database_Path.Content = dbname;
+            DatabaseNameLabel.Content = "Database Name : " + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString()); ;
 
             return;
         }
@@ -90,9 +97,11 @@ namespace ServerManager
             else
                 serverName = cboParser(cbx.SelectedValue.ToString());
             Show_Server_Path.Content = serverName;
+            ServerNameLabel.Content = "Server Name : " + ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
 
             DatabaseComboBox.Items.Clear();
             Show_Database_Path.Content = "";
+            DatabaseNameLabel.Content = "Database Name : ";// + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
             DatabaseOperations.initializeDatabaseInComboBox(serverName, DatabaseComboBox);
             return;
         }
@@ -109,6 +118,7 @@ namespace ServerManager
         public List<string> File_Names_To_replace_connectionString(String dirPath)
         {
             List<String> file_extension_list = Find_All_file_extensions();
+            
             List<string> serverFiles = Directory.GetFiles(dirPath, "*.*", SearchOption.AllDirectories)
                 .Where(file => file_extension_list
                 .Contains(System.IO.Path.GetExtension(file))).ToList();
@@ -118,6 +128,7 @@ namespace ServerManager
         }
         public List<string> Find_All_file_extensions()
         {
+            //int count = 0; 
             List<String> extension_list = new List<String>();
             if (XML_CheckBox.IsChecked == true)
                 extension_list.Add(".xml");
@@ -185,7 +196,8 @@ namespace ServerManager
             ServerOperations.Delete_Server(serverName);
 
             Show_Server_Path.Content = Show_Database_Path.Content = "";
-
+            ServerNameLabel.Content = "Server Name : "; //ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Server Successfully");
             return;
         }
@@ -209,6 +221,7 @@ namespace ServerManager
             DatabaseComboBox.Items.RemoveAt(selectedIndex);
             DatabaseOperations.Delete_Database(serverName, dbName);
             Show_Database_Path.Content = "";
+            DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Database Successfully");
             return;
         }
@@ -216,32 +229,48 @@ namespace ServerManager
         private void Replace_btn_Click(object sender, RoutedEventArgs e)
         {
             String folderPath = Show_Project_Path.Content.ToString();
-            if(folderPath.Equals(""))
+            if (folderPath.Equals(""))
             {
                 MessageBox.Show("Please Select The Project");
                 return;
             }
             List<String> file_list = File_Names_To_replace_connectionString(folderPath);
+            if(file_list.Count == 0)
+            {
+                MessageBox.Show("Please Select Atleast one File Extension");
+                return;
+            }
 
             String serverName = Show_Server_Path.Content.ToString();
             String databasename = Show_Database_Path.Content.ToString();
-            if((serverName.Equals("")) ||(databasename.Equals("")))
+            if ((serverName.Equals("")) || (databasename.Equals("")))
             {
                 MessageBox.Show("Please Select Both Server And Database");
                 return;
             }
-            String replaceBy = DatabaseOperations.Get_connection_string(serverName,databasename);
+
+            String Username = usernametextbox.Text.Trim();
+            String Password = passwordtextbox.Password;
+
+            String serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            String databaseName = DatabaseOperations.Get_connection_string(serverName, databasename);
+
+            String replaceBy = serverValue + "\\" + databaseName + "\\" + Username + "\\" + Password;
             foreach (String file_path in file_list)
             {
                 CommanOperations.replace_connectingStrInXmlConfig_file(file_path, replaceBy);
             }
 
-            MessageBox.Show("Replace Successfully");
+            String message = "Replace Successfully" + "\n";
+            message = message + "connection string value : " + "\n";
+            message = message + replaceBy;
+            MessageBox.Show(message);
             return;
         }
 
         private void server_database_value_btn_Click(object sender, RoutedEventArgs e)
         {
+            /*
             String connectionString = "";
             String serverValue = "";
             if(!Show_Server_Path.Content.ToString().Equals(""))
@@ -250,15 +279,28 @@ namespace ServerManager
                 if (!Show_Database_Path.Content.ToString().Equals(""))
                     connectionString = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(),Show_Database_Path.Content.ToString());
             }
+            */
 
+            String Username = usernametextbox.Text.Trim();
+            String Password = passwordtextbox.Password;
+
+            String serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            String databaseName = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
+
+            String replaceBy = serverValue + "\\" + databaseName + "\\" + Username + "\\" + Password;
+            /*
             String message = "Server Value :\n";
             message = message + serverValue + "\n";
             message = message + "Connection String :\n";
             message = message + connectionString;
+            */
 
-            MessageBox.Show(message);
+            MessageBox.Show(replaceBy);
             return;
 
         }
+
+
+        
     }
 }

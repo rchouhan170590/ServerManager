@@ -47,6 +47,11 @@
   <ItemGroup>
     <Compile Include="CommanOperations.cs" />
     <Compile Include="DatabaseOperations.cs" />
+    <Compile Include="Properties\GeneralSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GeneralSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="ManagerMainWindow.xaml.cs">
       <DependentUpon>ManagerMainWindow.xaml</DependentUpon>
     </Compile>
@@ -56,6 +61,11 @@
     <Compile Include="ServerOperations.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\GeneralSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GeneralSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
