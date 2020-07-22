@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rne2VGFauhVv8w34RS7O1JVG63VE/kwfqgzRNhp7TY0GOh3pOgHb3g4WjOLRVAvpGA9Rk/0qmIwt2A09ChQ2yg==",
+  "dgSpecHash": "EZUVuovDoYXDT45iQ+IED1xYLzAtbCQwRps6u6UenUgnaUTRSgGU3GWEDRNS8uRxYnlZt9WIIBCCbNdLxRMHGQ==",
   "success": true,
-  "projectFilePath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
+  "projectFilePath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rchouhan\\.nuget\\packages\\envdte\\8.0.2\\envdte.8.0.2.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\envdte100\\10.0.3\\envdte100.10.0.3.nupkg.sha512",
