@@ -97,6 +97,10 @@
   <ItemGroup>
     <Content Include="Resources\ManageWindow.png" />
     <Content Include="Properties\StoreDB.xml" />
+    <Content Include="ServerManager.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Page Include="ManagerMainWindow.xaml">

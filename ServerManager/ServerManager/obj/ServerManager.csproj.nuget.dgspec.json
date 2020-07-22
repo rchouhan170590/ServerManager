@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\ServerManager.csproj": {}
+    "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj": {}
   },
   "projects": {
-    "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\ServerManager.csproj": {
+    "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
+        "projectUniqueName": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
         "projectName": "ServerManager",
-        "projectPath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
+        "projectPath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
         "packagesPath": "C:\\Users\\rchouhan\\.nuget\\packages\\",
-        "outputPath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\obj\\",
+        "outputPath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

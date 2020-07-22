@@ -15,7 +15,7 @@ namespace ServerManager
     class CommanOperations
     {
      
-        public static String Path_of_StoreDB_XML_file()
+        public static String Path_of_StoreDB_XML_file1()
         {
             //String file_path = "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\ServerManager\\ServerManager\\ServerManager\\Properties\\StoreDB.xml";
             //return file_path;
@@ -25,6 +25,32 @@ namespace ServerManager
             x = x + "\\..\\..\\Properties\\StoreDB.xml";
 
             return x;
+        }
+
+        public static String Path_of_StoreDB_XML_file()
+        {
+            String file_path = "C:\\VSExtension\\ServerManager\\StoreDB.xml";
+            String dirpath = "C:\\VSExtension\\ServerManager";
+            
+            if (!Directory.Exists(dirpath))
+            {
+
+                Directory.CreateDirectory(dirpath);
+                //XmlDocument doc = new XmlDocument();
+
+                String output = "<Servers>";
+                output = output + "\n";
+                output = output + "</Servers>";
+                File.WriteAllText(file_path, output);
+
+                //doc.Save("C:\\VSExtension\\ServerManager\\StoreDB.xml");
+                return file_path;
+            }
+
+            else
+            {
+                return file_path;
+            }
         }
 
 
