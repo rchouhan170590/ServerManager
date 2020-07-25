@@ -1,7 +1,7 @@
 # ServerManager
 Visual Studio Extension To Manage connection String in Your projects
 
-####Start Extension
+#### Start Extension
 1. Click on the Tools
 2. Click on the  ServerManager
 
