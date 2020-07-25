@@ -25,6 +25,7 @@ namespace ServerManager
 
             if(!Check_Server_Exist_Or_Not(serverName))
             {
+                combobox.IsEnabled = true;
                 combobox.Items.Add(serverName);
                 String file_path = CommanOperations.Path_of_StoreDB_XML_file();
                 XmlDocument xmlDoc = new XmlDocument();

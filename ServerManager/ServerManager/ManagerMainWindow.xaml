@@ -10,39 +10,39 @@
         <Grid.RowDefinitions >
             <RowDefinition Height="25"/>
             <!-- heading -->
-            <RowDefinition Height="18*"/>
+            <RowDefinition Height="20*"/>
             <!-- Server Data information section -->
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="9*"/>
             <!-- Add/Delete Section -->
             <RowDefinition Height="45"/>
             <!-- submit -->
         </Grid.RowDefinitions>
 
-        <Grid >
+        <Grid Background="#000000">
             <!-- Background="#FF5C99D6" -->
-            <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Foreground="Black"> 
+            <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Foreground="White"> 
                 Server Manager
             </TextBlock>
         </Grid>
 
-        <Grid Grid.Row="1" Background="#FFDEDEDE">
+        <Grid Grid.Row="1" >
             <!--Background="" -->
             <Grid.RowDefinitions >
                 <RowDefinition  Height="6*"/>
                 <RowDefinition Height="6*"/>
                 <RowDefinition Height="6*"/>
-                <RowDefinition Height="9*"/>
-                <RowDefinition Height="12*"/>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="10*"/>
             </Grid.RowDefinitions>
 
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0">
-                <Grid Grid.Row="1" Background="#FFDEDEDE">
+                <Grid Grid.Row="1" Background="#1a1a1a">
 
-                    <Label x:Name="Select_Server" Content="Select Server" HorizontalAlignment="Left" Margin="15,5,0,0" VerticalAlignment="Top" Width="90" Height="30" FontSize="13"/>
+                    <Label x:Name="Select_Server" Content="Select Server" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="90" Height="30" FontSize="13" Foreground="White"/>
 
 
-                    <ComboBox x:Name="ServerComboBox" Height="30" Width="156" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,5,0,0" SelectionChanged="ServerComboBox_SelectionChanged" VerticalContentAlignment="Center" >
+                    <ComboBox x:Name="ServerComboBox" Height="30" Width="156" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,10,0,0" SelectionChanged="ServerComboBox_SelectionChanged" VerticalContentAlignment="Center"   >
 
                     </ComboBox>
 
@@ -53,12 +53,12 @@
 
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="1">
-                <Grid Grid.Row="2" Background="#FFDEDEDE">
+                <Grid Grid.Row="2" Background="#333333">
 
-                    <Label x:Name="Select_Database" Content="Select Database" HorizontalAlignment="Left" Margin="15,5,0,0" VerticalAlignment="Top" Width="102" Height="30" FontSize="13"/>
+                    <Label x:Name="Select_Database" Content="Select Database" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="102" Height="30" FontSize="13" Foreground="White"/>
 
                     <!-- <StackPanel Margin="240,5,10,0"> -->
-                    <ComboBox x:Name="DatabaseComboBox"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="DatabaseComboBox_SelectionChanged" Margin="202,5,0,0" Height="30" Width="156" VerticalContentAlignment="Center" >
+                    <ComboBox x:Name="DatabaseComboBox"  HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="DatabaseComboBox_SelectionChanged" Margin="202,10,0,0" Height="30" Width="156" VerticalContentAlignment="Center" >
 
                     </ComboBox>
                     <!-- </StackPanel> -->
@@ -71,13 +71,13 @@
 
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2">
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="3" Background="#1a1a1a">
 
-                    <Label x:Name="Select_File_Formate" Content="Select File Extension" HorizontalAlignment="Left" Margin="15,5,0,0" VerticalAlignment="Top" Width="126" Height="30" FontSize="13"/>
+                    <Label x:Name="Select_File_Formate" Content="Select File Extension" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="126" Height="30" FontSize="13" Foreground="White"/>
 
 
                     <!-- <StackPanel Margin="240,5,10,0"> -->
-                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="198,5,0,0" Height="30" Width="162" VerticalContentAlignment="Center">
+                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="198,10,0,0" Height="30" Width="162" VerticalContentAlignment="Center">
 
                         <!-- <ComboBoxItem IsSelected="True">Select File Formate</ComboBoxItem> -->
 
@@ -97,31 +97,37 @@
             </Border>
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3">
-                <Grid>
+                <Grid Background="#333333">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="10*"/>
 
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Label Content="Username :"  HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Width="126"/>
-                        <TextBox x:Name="usernametextbox" Text="" Margin="198,0,0,10" Width="162" HorizontalAlignment="Left"  Height="25"/>
+                        <Label Content="Username :"  HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="126" Foreground="White"/>
+                        <TextBox x:Name="usernametextbox" Text="" Margin="198,10,0,10" Width="162" HorizontalAlignment="Left"  Height="25" TextChanged="userTextboxChange"/>
                     </Grid>
 
                     <Grid Grid.Row="1">
-                        <Label Content="Password :" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Width="126"/>
-                        <PasswordBox x:Name="passwordtextbox"  Margin="198,0,0,10" Width="162" HorizontalAlignment="Left" Height="25" />
+                        <Label Content="Password :" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="126" Foreground="White"/>
+                        <PasswordBox x:Name="passwordtextbox"  Margin="198,10,0,10" Width="162" HorizontalAlignment="Left" Height="25" PasswordChanged="PasswordChangedHandler" />
                     </Grid>
                 </Grid>
             </Border>
 
 
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="4">
-                <Grid Grid.Row="0" Background="#FFDEDEDE">
+                <Grid Grid.Row="0" Background="#1a1a1a">
+                    <Label  x:Name="label1" Content="Connection String : " Margin="15,10,0,0" Foreground="White"/>
 
-                    <Label x:Name="connectionStringLabel"  Content="Connection String Value : Server Name\Database Name\Username\Passowrd " HorizontalAlignment="Left" Margin="15,1,0,0" VerticalAlignment="Top" Width="360" Height="23" FontSize="10"/>
-
-
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"  VerticalScrollBarVisibility="Auto" Margin="15,35,0,0" >
+                        <StackPanel Orientation="Vertical" >
+                            <StackPanel Orientation="Horizontal" >
+                                <Label x:Name="connectionStringLabel"  Content="Server=;Database=;User Id=;Password=;" HorizontalAlignment="Left"  VerticalAlignment="Top"  Height="23" FontSize="10" Background="White"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <!-- 
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
                         <StackPanel Orientation="Vertical" >
                             <StackPanel Orientation="Horizontal" >
@@ -129,7 +135,9 @@
                             </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
-
+                    
+                    -->
+                    <!--
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
                         <StackPanel Orientation="Vertical" >
                             <StackPanel Orientation="Horizontal" >
@@ -137,7 +145,8 @@
                             </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
-
+                     
+                    -->
                     <!-- 
                     <Label x:Name="connectionStringValue"  Content="" HorizontalAlignment="Left" Margin="15,30,0,0" VerticalAlignment="Top" Width="360" Height="23" FontSize="10"/>
                     -->
@@ -157,36 +166,36 @@
         </Grid>
 
         <Border Grid.Row="2" BorderThickness="1" BorderBrush="Black">
-            <Grid Grid.Row="0" >
+            <Grid Grid.Row="0" Background="#262626">
 
-                <TabControl Name="m_tab_control" >
+                <TabControl Name="m_tab_control" Background="#262626" >
 
-                    <TabItem Header="Manage Servers" >
+                    <TabItem Header="Manage Servers" Background="#000000" Foreground="Wheat">
                         <Grid >
 
-                            <Label x:Name="Serevr_Name_Add_Section" Content="Server Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="25" Width="100" />
+                            <Label x:Name="Serevr_Name_Add_Section" Content="Server Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="25" Width="100" Foreground="White" />
                             <TextBox x:Name="Server_Name_TextBox" HorizontalAlignment="Left" Height="25" Margin="150,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" />
 
-                            <Label x:Name="Serevr_Value_Add_Section" Content="Server Value" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" Height="25" Width="100" />
+                            <Label x:Name="Serevr_Value_Add_Section" Content="Server Value" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" Height="25" Width="100" Foreground="White"/>
                             <TextBox x:Name="Server_Value_TextBox" HorizontalAlignment="left" Height="25" Margin="150,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" />
 
-                            <Button x:Name="Add_New_Server_btn" Content="Add" HorizontalAlignment="Left" Margin="260,80,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="Add_New_Server_btn_Click" />
-                            <Button x:Name="Delete_Server_btn" Content="Delete Selected Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145"  Height="30" Margin="15,80,0,0" Click="Delete_Server_btn_Click" />
+                            <Button x:Name="Add_New_Server_btn" Content="Add" HorizontalAlignment="Left" Margin="268,80,0,0" VerticalAlignment="Top" Width="94" Height="30" Click="Add_New_Server_btn_Click" />
+                            <Button x:Name="Delete_Server_btn" Content="Delete Server" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100"  Height="30" Margin="15,80,0,0" Click="Delete_Server_btn_Click" />
                         </Grid>
                     </TabItem>
 
-                    <TabItem Header="Manage Databases" >
+                    <TabItem Header="Manage Databases" Background="#000000" Foreground="Wheat" >
                         <Grid >
 
-                            <Label x:Name="Database_Name_Add_Section" Content="Database Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
+                            <Label x:Name="Database_Name_Add_Section" Content="Database Name" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Height="25" Width="100" Foreground="White"/>
                             <TextBox x:Name="Database_Name_TextBox" HorizontalAlignment="Left" Height="25" Margin="150,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
 
-                            <Label x:Name="Database_Value_Add_Section" Content="Database Value" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
+                            <Label x:Name="Database_Value_Add_Section" Content="Database Value" HorizontalAlignment="Left" Margin="15,45,0,0" VerticalAlignment="Top" Height="25" Width="100" Foreground="White"/>
                             <TextBox x:Name="Database_Value_TextBox" HorizontalAlignment="Left" Height="25" Margin="150,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" />
 
                             <Button x:Name="Add_New_Database_btn" Content="Add" HorizontalAlignment="Left" Margin="254,80,0,0" VerticalAlignment="Top" Width="106" Height="30" Click="Add_New_Database_btn_Click"/>
 
-                            <Button x:Name="Delete_database_btn" Content="Delete Selected DataBase" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145"  Height="30" Margin="15,80,0,0" Click="Delete_database_btn_Click"/>
+                            <Button x:Name="Delete_database_btn" Content="Delete DataBase" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100"  Height="30" Margin="15,80,0,0" Click="Delete_database_btn_Click"/>
 
                         </Grid>
                     </TabItem>
@@ -197,7 +206,7 @@
         </Border>
 
         <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3">
-            <Grid Grid.Row="3" >
+            <Grid Grid.Row="3" Background="#1a1a1a">
 
                 <Button x:Name="Replace_btn" Content="Replace" HorizontalAlignment="Left" Margin="269,5,0,0" VerticalAlignment="Top" Width="94" Height="30" Click="Replace_btn_Click"/>
                 <!-- 

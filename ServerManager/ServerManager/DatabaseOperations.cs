@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Xml;
 using System.IO;
+using Microsoft.VisualStudio.Debugger.Interop;
 
 namespace ServerManager
 {
@@ -24,6 +25,8 @@ namespace ServerManager
         {
             if(!Check_Database_Exist_Or_Not(serverName, displayName))
             {
+
+
                 String file_path = CommanOperations.Path_of_StoreDB_XML_file();
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(file_path);
@@ -44,6 +47,7 @@ namespace ServerManager
 
                 xmlDoc.Save(file_path);
 
+                combobox.IsEnabled = true;
                 combobox.Items.Add(displayName);
                 MessageBox.Show("Database Added Successfully");
                 return;
@@ -128,5 +132,8 @@ namespace ServerManager
 
             return "-1";
         }
+
+        
+
     }
 }
