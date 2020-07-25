@@ -78,6 +78,48 @@ namespace ServerManager
         }
 
 
-        
+        public static int findNthOccurance(String str, char ch, int N)
+        {
+            int occur = 0;
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == ch)
+                {
+                    occur += 1;
+                }
+                if (occur == N)
+                    return i;
+            }
+            return -1;
+        }
+
+        public static String serverDisplaychange(String connetionString, String Svalue, int position)
+        {
+            int i = findNthOccurance(connetionString, '=', position);
+            int j = findNthOccurance(connetionString, ';', position);
+            Console.WriteLine(i);
+            Console.WriteLine(j);
+            if (j - i - 1 <= 0)
+                connetionString = connetionString.Insert(i + 1, Svalue);
+            else
+            {
+                string result = connetionString.Substring(i + 1, j - i - 1);
+                connetionString = connetionString.Replace(result, Svalue);
+            }
+            return connetionString;
+        }
+
+        public static string stringBefore_Nth_equal(String connectionString, int n)
+        {
+            int i = findNthOccurance(connectionString, '=', n);
+            return  connectionString.Substring(0, i + 1);
+        }
+
+        public static string stringAfter_Nth_equal(String connectionString, int n)
+        {
+            int i = findNthOccurance(connectionString, ';', n);
+            return connectionString.Substring(i);  //, connectionString.Length-1
+        }
+
     }
 }

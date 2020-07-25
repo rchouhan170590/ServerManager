@@ -5,4 +5,4 @@ Visual Studio Extension To Manage connection String in Your projects
 1. Click on the Tools
 2. Click on the  ServerManager
 
-![screen1](/Media/screenshot1.jpg)
+![screen1](/Media/SharedScreenshot.jpg)

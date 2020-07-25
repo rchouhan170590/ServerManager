@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="ServerManager.612e588e-ab96-40e7-ad6a-a1668488a067" Version="1.0" Language="en-US" Publisher="Rohit Chouhan" />
         <DisplayName>ServerManager</DisplayName>
-        <Description xml:space="preserve">VSIX  ProjectServ</Description>
+        <Description xml:space="preserve">Change your all connection strings in selected project with different connection stringManagermV</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />

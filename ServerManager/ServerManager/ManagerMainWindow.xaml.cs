@@ -54,7 +54,14 @@ namespace ServerManager
             Show_Project_Path.Content = CommanOperations.project_path();
 
 
-           // connectionStringValueLabel.Content = 
+            var countitem = ServerComboBox.Items.Count;
+            if (countitem == 0)
+            {
+                ServerComboBox.IsEnabled = false;
+            }
+            DatabaseComboBox.IsEnabled = false;
+
+            //m_tab_control.TabPages["rohit"]
         }
 
         /*
@@ -83,7 +90,10 @@ namespace ServerManager
             else
                 dbname = cboParser(cbx.SelectedValue.ToString());
             Show_Database_Path.Content = dbname;
-            DatabaseNameLabel.Content = "Database Name : " + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString()); ;
+
+            string dbvalue = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), dbvalue, 2);
+            //DatabaseNameLabel.Content = "Database Name : " + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString()); ;
 
             return;
         }
@@ -97,12 +107,25 @@ namespace ServerManager
             else
                 serverName = cboParser(cbx.SelectedValue.ToString());
             Show_Server_Path.Content = serverName;
-            ServerNameLabel.Content = "Server Name : " + ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            string serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            //connectionStringLabel
+
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),serverValue,1);
+
+            
 
             DatabaseComboBox.Items.Clear();
             Show_Database_Path.Content = "";
-            DatabaseNameLabel.Content = "Database Name : ";// + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
+
+            connectionStringLabel.Content  = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), "", 2);
+            //DatabaseNameLabel.Content = "Database Name : ";// + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
             DatabaseOperations.initializeDatabaseInComboBox(serverName, DatabaseComboBox);
+
+            var countitem = DatabaseComboBox.Items.Count;
+            if (countitem == 0)
+                DatabaseComboBox.IsEnabled = false;
+            else
+                DatabaseComboBox.IsEnabled = true;
             return;
         }
 
@@ -193,11 +216,22 @@ namespace ServerManager
 
             int selectedIndex = ServerComboBox.SelectedIndex;
             ServerComboBox.Items.RemoveAt(selectedIndex);
+            DatabaseComboBox.Items.Clear();
+            DatabaseComboBox.IsEnabled = false;
+
             ServerOperations.Delete_Server(serverName);
 
+            var countitem = ServerComboBox.Items.Count;
+            if (countitem == 0)
+                ServerComboBox.IsEnabled = false;
+
             Show_Server_Path.Content = Show_Database_Path.Content = "";
-            ServerNameLabel.Content = "Server Name : "; //ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
-            DatabaseNameLabel.Content = "Database Name : ";
+
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),"", 1);
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),"", 2);
+
+            //ServerNameLabel.Content = "Server Name : "; //ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
+            //DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Server Successfully");
             return;
         }
@@ -220,8 +254,15 @@ namespace ServerManager
             int selectedIndex = DatabaseComboBox.SelectedIndex;
             DatabaseComboBox.Items.RemoveAt(selectedIndex);
             DatabaseOperations.Delete_Database(serverName, dbName);
+
+            var countitem = DatabaseComboBox.Items.Count;
+            if (countitem == 0)
+                DatabaseComboBox.IsEnabled = false;
+
             Show_Database_Path.Content = "";
-            DatabaseNameLabel.Content = "Database Name : ";
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), "", 2);
+
+            //DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Database Successfully");
             return;
         }
@@ -270,25 +311,15 @@ namespace ServerManager
 
         private void server_database_value_btn_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            String connectionString = "";
-            String serverValue = "";
-            if(!Show_Server_Path.Content.ToString().Equals(""))
-            {
-                serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
-                if (!Show_Database_Path.Content.ToString().Equals(""))
-                    connectionString = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(),Show_Database_Path.Content.ToString());
-            }
-            */
-
             String Username = usernametextbox.Text.Trim();
             String Password = passwordtextbox.Password;
 
             String serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
             String databaseName = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
 
-            String replaceBy = serverValue + "\\" + databaseName + "\\" + Username + "\\" + Password;
+            String replaceBy = "Server=" + serverValue+ ";Database=" + databaseName+ ";User Id=" + Username+ ";Password="+Password+";";
             /*
+             * Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;
             String message = "Server Value :\n";
             message = message + serverValue + "\n";
             message = message + "Connection String :\n";
@@ -300,7 +331,29 @@ namespace ServerManager
 
         }
 
+        private void userTextboxChange(object sender, TextChangedEventArgs args)
+        {
+            string before = CommanOperations.stringBefore_Nth_equal(connectionStringLabel.Content.ToString(),3);
+            string after = CommanOperations.stringAfter_Nth_equal(connectionStringLabel.Content.ToString(),3);
+
+            connectionStringLabel.Content = before + usernametextbox.Text + after;
+
+            return;
+        }
+
+        private void PasswordChangedHandler(Object sender, RoutedEventArgs args)
+        {
+            int len = passwordtextbox.Password.Length;
+            String temp = "";
+            for (int i = 0; i < len; i++)
+                temp += "*";
+
+            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), temp, 4);
+
+            return;
+        }
 
         
+
     }
 }
