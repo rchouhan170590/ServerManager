@@ -34,6 +34,7 @@ namespace ServerManager
     /// </summary>
     public partial class ManagerMainWindow : System.Windows.Window
     {
+
         public ManagerMainWindow()
         {
             InitializeComponent();
@@ -64,6 +65,15 @@ namespace ServerManager
             //m_tab_control.TabPages["rohit"]
         }
 
+
+        //public ComboBox helpServerCombobox()
+        //{
+         //   return ServerComboBox;
+        //}
+
+        
+        //public ComboBox DatabaseComboBox;
+
         /*
         private void Select_Project_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -92,7 +102,7 @@ namespace ServerManager
             Show_Database_Path.Content = dbname;
 
             string dbvalue = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), dbvalue, 2);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), dbvalue, 2);
             //DatabaseNameLabel.Content = "Database Name : " + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString()); ;
 
             return;
@@ -110,14 +120,14 @@ namespace ServerManager
             string serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
             //connectionStringLabel
 
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),serverValue,1);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),serverValue,1);
 
             
 
             DatabaseComboBox.Items.Clear();
             Show_Database_Path.Content = "";
 
-            connectionStringLabel.Content  = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), "", 2);
+            connectionStringLabel.Content  = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), "", 2);
             //DatabaseNameLabel.Content = "Database Name : ";// + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
             DatabaseOperations.initializeDatabaseInComboBox(serverName, DatabaseComboBox);
 
@@ -227,8 +237,8 @@ namespace ServerManager
 
             Show_Server_Path.Content = Show_Database_Path.Content = "";
 
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),"", 1);
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(),"", 2);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),"", 1);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),"", 2);
 
             //ServerNameLabel.Content = "Server Name : "; //ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
             //DatabaseNameLabel.Content = "Database Name : ";
@@ -260,7 +270,7 @@ namespace ServerManager
                 DatabaseComboBox.IsEnabled = false;
 
             Show_Database_Path.Content = "";
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), "", 2);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), "", 2);
 
             //DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Database Successfully");
@@ -348,7 +358,7 @@ namespace ServerManager
             for (int i = 0; i < len; i++)
                 temp += "*";
 
-            connectionStringLabel.Content = CommanOperations.serverDisplaychange(connectionStringLabel.Content.ToString(), temp, 4);
+            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), temp, 4);
 
             return;
         }

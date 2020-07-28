@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace ServerManager
 {
-    class CommanOperations
+    public class CommanOperations
     {
      
         public static String Path_of_StoreDB_XML_file1()
@@ -92,8 +92,8 @@ namespace ServerManager
             }
             return -1;
         }
-
-        public static String serverDisplaychange(String connetionString, String Svalue, int position)
+        //serverDisplaychange
+        public static String DisplayValueChange(String connetionString, String Svalue, int position)
         {
             int i = findNthOccurance(connetionString, '=', position);
             int j = findNthOccurance(connetionString, ';', position);
@@ -112,12 +112,16 @@ namespace ServerManager
         public static string stringBefore_Nth_equal(String connectionString, int n)
         {
             int i = findNthOccurance(connectionString, '=', n);
+            if (i == -1)
+                return "-1";
             return  connectionString.Substring(0, i + 1);
         }
 
         public static string stringAfter_Nth_equal(String connectionString, int n)
         {
             int i = findNthOccurance(connectionString, ';', n);
+            if (i == -1)
+                return "-1";
             return connectionString.Substring(i);  //, connectionString.Length-1
         }
 

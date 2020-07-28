@@ -10,7 +10,7 @@ using System.Xml;
 using System.IO;
 namespace ServerManager
 {
-    class ServerOperations
+    public class ServerOperations
     {
         public static void initializeServerInComboBox(ComboBox combobox)
         {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<a:PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/v/schemas.microsoft.com/developer/vsx-schema-design/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011" xmlns:a="http://schemas.microsoft.com/developer/vsx-schema/2011">
+    <a:Metadata>
+        <a:Identity Id="ServerManager.612e588e-ab96-40e7-ad6a-a1668488a067" Publisher="Rohit Chouhan" Version="1.0" />
+        <a:DisplayName>ServerManager</a:DisplayName>
+        <a:Description xml:space="preserve" >Change your all connection strings in selected project with different connection stringManagermV</a:Description>
+    </a:Metadata>
+    <Metadata>
+        <Identity Id="ServerManager.612e588e-ab96-40e7-ad6a-a1668488a067" Version="1.0" Language="en-US" Publisher="Rohit Chouhan" />
+        <DisplayName>
+            ServerManager</DisplayNamChange the Connection String in Selected Project    Project    cted P       on       the c        ServerManagerServerManagerm    </MetadatChange the Connection String in Selected Project"    Id="Microsoft.VisualStudio.Community" Version="[16.0, 1Change the Connection String in Selected Project"          <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4"Change="" the="" Connection="" String="" in="" Selected="" Project="""           <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core e"Change="" the="" Connection="" String="" in="" Selected="" Project="""     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+            </Assets>
+        </a:PackageManifest>

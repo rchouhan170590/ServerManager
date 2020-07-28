@@ -31,9 +31,6 @@ D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\Ser
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.dll
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.pdb
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.pkgdef
-D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.vsix
-D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\extension.vsixmanifest
-D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.csprojAssemblyReference.cache
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ManagerMainWindow.g.cs
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager_MarkupCompile.cache
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager_MarkupCompile.lref
@@ -52,6 +49,17 @@ D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\Ser
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.pdb
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.pkgdef
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.latest.pkgdef
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\ServerManager.vsix
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\extension.vsixmanifest
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\extension.vsixmanifest
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\files.json
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\createTemplateManifests.cache
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.csprojAssemblyReference.cache
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\NUnit3.TestAdapter.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\NUnit3.TestAdapter.pdb
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\nunit.engine.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\nunit.engine.api.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\nunit.engine.core.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\nunit.framework.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Debug\nunit.framework.pdb
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Debug\ServerManager.csproj.CopyComplete

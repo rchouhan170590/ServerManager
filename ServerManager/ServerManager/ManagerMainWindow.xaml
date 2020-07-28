@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ServerManager"
              mc:Ignorable="d" 
-             d:DesignHeight="570" d:DesignWidth="400" ResizeMode="NoResize">
+             d:DesignHeight="570" d:DesignWidth="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions >
             <RowDefinition Height="25"/>

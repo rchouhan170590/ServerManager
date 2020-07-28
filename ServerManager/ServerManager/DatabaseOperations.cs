@@ -12,7 +12,7 @@ using Microsoft.VisualStudio.Debugger.Interop;
 
 namespace ServerManager
 {
-    class DatabaseOperations
+    public class DatabaseOperations
     {
         public static void initializeDatabaseInComboBox(String ServerName,ComboBox dbcomboBox)
         {

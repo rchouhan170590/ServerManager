@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EZUVuovDoYXDT45iQ+IED1xYLzAtbCQwRps6u6UenUgnaUTRSgGU3GWEDRNS8uRxYnlZt9WIIBCCbNdLxRMHGQ==",
+  "dgSpecHash": "za3aAZ27Vy58gGwVlhZLZNXf4A3V7BjzdIJbmJvRsUAMpIDLRBIdYSyThZtVzYQIm/NIa8MXJ8aN2NaMFGnecg==",
   "success": true,
   "projectFilePath": "D:\\INTERN\\2020\\SocGen\\MyVSExtension\\GithubServerManager\\PublishServerManager\\ServerManager\\ServerManager\\ServerManager.csproj",
   "expectedPackageFiles": [
@@ -79,6 +79,8 @@
     "C:\\Users\\rchouhan\\.nuget\\packages\\microsoft.vssdk.buildtools\\16.6.2057\\microsoft.vssdk.buildtools.16.6.2057.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\rchouhan\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\rchouhan\\.nuget\\packages\\nunit3testadapter\\4.0.0-alpha.1\\nunit3testadapter.4.0.0-alpha.1.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\stdole\\7.0.3302\\stdole.7.0.3302.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\streamjsonrpc\\1.5.43\\streamjsonrpc.1.5.43.nupkg.sha512",
     "C:\\Users\\rchouhan\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
