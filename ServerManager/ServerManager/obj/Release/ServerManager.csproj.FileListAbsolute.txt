@@ -17,7 +17,6 @@ D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\Ser
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\VSCT.write.1.tlog
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\resources.json
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\ctoFiles.json
-D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\_EmptyResource.resources.original
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\mergeCto.cache
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\ServerManager.csproj.CoreCompileInputs.cache
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\ServerManager.dll
@@ -27,3 +26,12 @@ D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\Ser
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\extension.vsixmanifest
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\files.json
 D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\createTemplateManifests.cache
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\ServerManager.csprojAssemblyReference.cache
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\NUnit3.TestAdapter.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\NUnit3.TestAdapter.pdb
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\nunit.engine.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\nunit.engine.api.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\nunit.engine.core.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\nunit.framework.dll
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\bin\Release\nunit.framework.pdb
+D:\INTERN\2020\SocGen\MyVSExtension\GithubServerManager\PublishServerManager\ServerManager\ServerManager\obj\Release\ServerManager.csproj.CopyComplete
