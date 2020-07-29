@@ -55,6 +55,7 @@ namespace ServerManager
             Show_Project_Path.Content = CommanOperations.project_path();
 
 
+            
             var countitem = ServerComboBox.Items.Count;
             if (countitem == 0)
             {
@@ -66,12 +67,14 @@ namespace ServerManager
         }
 
 
-        //public ComboBox helpServerCombobox()
-        //{
-         //   return ServerComboBox;
-        //}
-
         
+        public ComboBox GetServerComboBox
+        {
+            get
+            {
+                return ServerComboBox;
+            }
+        }
         //public ComboBox DatabaseComboBox;
 
         /*
@@ -102,7 +105,7 @@ namespace ServerManager
             Show_Database_Path.Content = dbname;
 
             string dbvalue = DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), dbvalue, 2);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(), dbvalue, 2);
             //DatabaseNameLabel.Content = "Database Name : " + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString()); ;
 
             return;
@@ -120,14 +123,14 @@ namespace ServerManager
             string serverValue = ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
             //connectionStringLabel
 
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),serverValue,1);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(),serverValue,1);
 
             
 
             DatabaseComboBox.Items.Clear();
             Show_Database_Path.Content = "";
 
-            connectionStringLabel.Content  = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), "", 2);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(), "", 2);
             //DatabaseNameLabel.Content = "Database Name : ";// + DatabaseOperations.Get_connection_string(Show_Server_Path.Content.ToString(), Show_Database_Path.Content.ToString());
             DatabaseOperations.initializeDatabaseInComboBox(serverName, DatabaseComboBox);
 
@@ -237,8 +240,8 @@ namespace ServerManager
 
             Show_Server_Path.Content = Show_Database_Path.Content = "";
 
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),"", 1);
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(),"", 2);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(),"", 1);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(),"", 2);
 
             //ServerNameLabel.Content = "Server Name : "; //ServerOperations.Get_server_value(Show_Server_Path.Content.ToString());
             //DatabaseNameLabel.Content = "Database Name : ";
@@ -270,7 +273,7 @@ namespace ServerManager
                 DatabaseComboBox.IsEnabled = false;
 
             Show_Database_Path.Content = "";
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), "", 2);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(), "", 2);
 
             //DatabaseNameLabel.Content = "Database Name : ";
             MessageBox.Show("Delete Database Successfully");
@@ -343,10 +346,10 @@ namespace ServerManager
 
         private void userTextboxChange(object sender, TextChangedEventArgs args)
         {
-            string before = CommanOperations.stringBefore_Nth_equal(connectionStringLabel.Content.ToString(),3);
-            string after = CommanOperations.stringAfter_Nth_equal(connectionStringLabel.Content.ToString(),3);
+            string before = CommanOperations.stringBefore_Nth_equal(connectionStringLabel.Text.ToString(),3);
+            string after = CommanOperations.stringAfter_Nth_equal(connectionStringLabel.Text.ToString(),3);
 
-            connectionStringLabel.Content = before + usernametextbox.Text + after;
+            connectionStringLabel.Text = before + usernametextbox.Text + after;
 
             return;
         }
@@ -358,11 +361,17 @@ namespace ServerManager
             for (int i = 0; i < len; i++)
                 temp += "*";
 
-            connectionStringLabel.Content = CommanOperations.DisplayValueChange(connectionStringLabel.Content.ToString(), temp, 4);
+            connectionStringLabel.Text = CommanOperations.DisplayValueChange(connectionStringLabel.Text.ToString(), temp, 4);
 
             return;
         }
 
+
+
+
+        /////////////////////////////////  Test //////////////////////////////////////////////////
+        
+        
         
 
     }
