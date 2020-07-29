@@ -31,7 +31,10 @@ namespace ServerManager
         {
             String file_path = "C:\\VSExtension\\ServerManager\\StoreDB.xml";
             String dirpath = "C:\\VSExtension\\ServerManager";
-            
+
+            //String dirpath2 = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Resources";
+            //String file_path2 = dirpath2 + "\\StoreDB.xml";
+
             if (!Directory.Exists(dirpath))
             {
 

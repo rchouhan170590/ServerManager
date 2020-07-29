@@ -18,13 +18,23 @@ namespace ProjectTest
     [TestFixture]
     public class Class1
     {
-        [Test]
-        public void CheckNthOcurranceOfChar_inString()
+        [TestCase('a',1)]
+        [TestCase('b', 1)]
+        public void CheckNthOcurranceOfChar_inString(char input2,int expectedOutput)
         {
-            Assert.AreEqual(CommanOperations.findNthOccurance("aabccdafa", 'a', 2),1);
-            Assert.AreEqual(CommanOperations.findNthOccurance("aabccdafa", 'a', 3),6);
-            Assert.AreEqual(CommanOperations.findNthOccurance("aabccdafa", 'x', 2),-1);
+            //arrange 
+            String input1 = "aabccdafa";
+            int input3 = 2;
             
+            // action 
+            var actualOutput = CommanOperations.findNthOccurance(input1, input2, input3);
+
+            //Assert 
+            Assert.AreEqual(actualOutput,expectedOutput);
+
+            //mock progra...// framwork  //testing .. 
+            // dependency injection...
+
         }
 
         [Test]
@@ -60,13 +70,30 @@ namespace ProjectTest
 
         }
 
-        
-
-        //private System.Windows.Controls.ComboBox _comboSelection;
         /*
-        public Class1(ComboBox comboSelection)
+        [Test]
+        public void Test_Add_New_Server()
         {
-            _comboSelection = comboSelection;
+            ManagerMainWindow temp = new ManagerMainWindow();
+            var combobox = temp.GetServerComboBox;
+
+            String serverName = "s1";
+            String value = "val1";
+
+            if(!ServerOperations.Check_Server_Exist_Or_Not("s1"))
+            {
+                ServerOperations.Add_New_Server(serverName, value, combobox);
+                Assert.AreEqual(ServerOperations.Check_Server_Exist_Or_Not("s1"), true);
+            }
+            
+        }
+
+        
+        //private System.Windows.Controls.ComboBox _combobox;
+        /*
+        public Class1(ComboBox combobox)
+        {
+            _combobox = combobox;
         }
         */
 
