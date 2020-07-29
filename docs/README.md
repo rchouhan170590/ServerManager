@@ -1,7 +1,7 @@
 # ServerManager
 Visual Studio Extension To Manage connection String in Your projects
 
-![screen1](/Media/screenshot1.jpg)
+![screen1](https://raw.githubusercontent.com/rchouhan170590/ServerManager/master/Media/SharedScreenshot.jpg)
 
 #### Start Extension
 1. Open the Microsoft  Visual Studio
