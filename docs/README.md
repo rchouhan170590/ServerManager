@@ -1,10 +1,10 @@
 # ServerManager
 Visual Studio Extension To Manage connection String in Your projects
 
-#### Guide : [Agilan Vageesan](https://www.linkedin.com/in/agilan-vageesan-b6a12a1b1/?originalSubdomain=in)
-#### Product Download Link : [ServerManager](https://marketplace.visualstudio.com/items?itemName=RohitChouhan.rchouhan123)
+#### Guide : [ Agilan Vageesan](https://www.linkedin.com/in/agilan-vageesan-b6a12a1b1/?originalSubdomain=in)
+#### Product Download Link : [ ServerManager](https://marketplace.visualstudio.com/items?itemName=RohitChouhan.rchouhan123)
 
-![Screenshot](https://raw.githubusercontent.com/rchouhan170590/ServerManager/master/Media/SharedScreenshot.jpg)
+![Screenshot](https://raw.githubusercontent.com/rchouhan170590/ServerManager/master/Media/screen2.jpg)
 
 #### Start Extension
 1. Open the Microsoft  Visual Studio
